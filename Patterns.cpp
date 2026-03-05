@@ -153,6 +153,48 @@ void print11(int n){
     }
 }
 
+// this is single pattern
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+void step1(){
+    int i,j,k, n = 10;
+   for( i = 0 ; i < 5 ; i++){
+      for(j = 0 ; j < n/2 - i ; j++){
+          cout << "*";
+      }
+      
+      for(j = 0 ; j < i*2 ; j++){
+          cout << " ";
+      }
+      
+      for( j = n - i ; j > 10/2 ; j--){
+          cout << "*";
+      }
+       cout << endl;
+   }
+}
+
+void step2(){
+    int i,j,k, n = 10, count = 8;
+   for( i = 0 ; i < n/2 ; i++){
+      for(j = 0 ; j <= i ; j++){
+          cout << "*";
+      }
+      
+      for(j = 0 ; j < count ; j++){
+          cout << " ";
+      }
+      
+      for( j = 0 ; j <= i ; j++){
+          cout << "*";
+      }
+      count -= 2;
+       cout << endl;
+   }
+}
+
 
 int main(){
     int n;
@@ -167,4 +209,7 @@ int main(){
     // print9(n);
     // print10(n);
     print11(n);
+
+   step1(); // this both for single pattern
+   step2();
 }
