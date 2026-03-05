@@ -196,6 +196,51 @@ void step2(){
 }
 
 
+void print(int n){
+    int i,j, count = 8;
+    for( i = 0 ; i < 5 ; i++){
+        for(j = 0 ; j <= i ; j++){
+            cout << "*";
+        }
+        for(j = 0 ; j < count ; j++){
+            cout << " ";
+        }
+        for(j = 0 ; j <= i ; j++){
+            cout << "*";
+        }
+        cout << endl;
+        count -= 2;
+    }
+    count = 2;
+    for( i = 0 ; i < 5 ; i++){
+        for(j = 0 ; j < n/2 - i ; j++){
+            cout << "*";
+        }
+        for(j = 0 ; j < count  ; j++){
+            cout << " ";
+        }
+        for(j = 0 ; j < n/2 - i ; j++){
+            cout << "*";
+        }
+        cout << endl;
+        count += 2;
+    }
+}
+
+void print3(int n){
+    int i,j;
+    for(i = 0 ; i < n ; i++){
+        for(j = 0 ; j < n ; j++){
+            if((i == 1 || i == 2) && (j >=1  && j <=2) ){
+                cout << " ";
+            }else{
+                cout << "*";
+            }
+        }
+        cout << endl;
+    }
+}
+
 int main(){
     int n;
     cout << "Enter value of n ";
